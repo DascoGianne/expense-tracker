@@ -1,55 +1,74 @@
-# Expense Tracker (Vite + React)
+# Expense Tracker
 
-Production-quality Expense Tracker built with Vite + React. Includes a responsive sidebar layout, view management, local storage persistence, and theme support.
+An **Expense Tracker web application** built with **Vite + React** that helps users track daily expenses, manage categories, view summaries, and analyze spending habits.  
 
-## Project Structure
+---
 
-```
-expense-tracker/
-  src/
-    components/       UI building blocks
-    pages/            View components (Dashboard, Categories, Summary, Settings)
-    hooks/            Reusable hooks (localStorage)
-    utils/            Formatting + date utilities
-    App.jsx           App shell + state management
-    main.jsx          React entry
-    styles.css        Global styling + themes
-  index.html
-  vite.config.js
-  package.json
-```
+## ✨ Features
 
-## Key Architecture Decisions
+### Core
+- Add, edit, and delete expenses
+- Expense details:
+  - Date
+  - Amount
+  - Category
+  - Optional note
+- Persistent storage using `localStorage`
 
-- State-based navigation: lightweight view state stored in localStorage and mirrored to URL hash.
-- Local persistence: reusable `useLocalStorage` hook for expenses, categories, theme, filters, and view.
-- Modular UI: sidebar, topbar, totals panel, expense list, and forms are isolated components.
-- Utilities: date and currency formatting are centralized in `src/utils`.
+### Categories
+- Default expense categories
+- Add custom categories
+- Remove categories safely
+- Category-based expense grouping
 
-## Scripts
+### Summaries & Filters
+- View expenses by:
+  - This week
+  - This month
+  - This year
+  - All time
+- Automatic totals:
+  - Weekly
+  - Monthly
+  - Yearly
+- Category-based breakdowns
 
-From `expense-tracker/`:
+### UI / UX
+- Left sidebar navigation:
+  - Dashboard
+  - Categories
+  - Summary
+  - Settings
+- Responsive layout (desktop & mobile)
+- Sticky summary panels
+- Currency formatting (default: PHP ₱)
+- Theme support:
+  - Dark
+  - Neutral
+  - Light
 
-```
-npm install
-npm run dev
-npm run build
-npm run preview
-```
+---
 
-## GitHub Pages Deployment
+## 🧠 Planned Features
+- Monthly budgets per category
+- Charts & analytics (spending over time, category distribution)
+- CSV import / export
+- Recurring expenses
+- Multi-currency support
+- Cloud sync & authentication (future)
 
-This project uses `base: "./"` in `vite.config.js` for static hosting.
+---
 
-1. `npm run build`
-2. Deploy the `dist/` folder to GitHub Pages (e.g., via `gh-pages` or your preferred workflow).
+## 🛠 Tech Stack
 
-## Features
+- **Vite** – Fast build tool and dev server
+- **React** – UI library (functional components & hooks)
+- **JavaScript (ES6+)**
+- **CSS** – Custom styling with CSS variables
+- **LocalStorage** – Client-side persistence
+- **GitHub Pages** – Deployment
 
-- Add/edit/delete expenses
-- Category management with defaults and persistence
-- Filters: week, month, year, all time
-- Totals and category breakdowns
-- Responsive layout with collapsible sidebar
-- Theme selection (dark/neutral/light)
-- Currency and locale formatting
+---
+
+## 📁 Project Structure
+
